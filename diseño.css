@@ -32,11 +32,6 @@ input {
 }
 
 font,
-input[type=text]:hover {
-    cursor: crosshair;
-}
-
-font,
 input[type=submit]:hover {
-    cursor: crosshair;
+    color: rgb(0, 144, 144);
 }
