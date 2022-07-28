@@ -1,20 +1,42 @@
-body, html{
+body,
+html {
     height: 100%;
-
 }
-body{
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 80vh;
-    background: linear-gradient(to right,rgb(198, 255, 255),rgb(0, 144, 144) );
-    
+    background: linear-gradient(to right, rgb(198, 255, 255), rgb(0, 144, 144));
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     background: white;
     text-align: center;
     padding: 20px 25px;
-    
+}
+
+form,
+label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifa;
+    font-size: larger;
+}
+
+font,
+input {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+font,
+input[type=text]:hover {
+    cursor: crosshair;
+}
+
+font,
+input[type=submit]:hover {
+    cursor: crosshair;
 }

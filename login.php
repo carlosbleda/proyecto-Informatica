@@ -14,9 +14,11 @@
     <br>
     <input type="password" placeholder='Constraseña'>
     <br>
-    <button type="submit">Ingresar</button>
+    <input type="submit" value="ingresar">
     <br>
-    <button type="submit">Registrarse</button>
+    <a href="./register.php"> <input type="button" value="registrarse"></a>
+
+
     
 </body>
 </form>
