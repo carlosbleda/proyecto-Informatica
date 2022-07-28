@@ -1,0 +1,20 @@
+body, html{
+    height: 100%;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background: linear-gradient(to right,rgb(198, 255, 255),rgb(0, 144, 144) );
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    text-align: center;
+    padding: 20px 25px;
+    
+}
