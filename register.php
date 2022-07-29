@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./diseño.css">
 </head>
 <body>
+    
+<img src="img/fisiosho.png" alt="" id="logo">  
     <form action="">
     <h1>Registrate</h1>
     <input type="text" placeholder='Usuario'>

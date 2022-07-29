@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="./diseño.css">
 </head>
 <body>
-    <img src="img/logo.jpeg" alt="" >
+   
+      <img src="img/fisiosho.png" alt="" id="logo">  
+   
+    
 <form action="" method="POST">
     <h1>Inicio de sesion</h1>
     <input type="text" placeholder='Usuario'>
