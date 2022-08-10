@@ -51,9 +51,6 @@ input[type=button] {
 }
 
 font,
-input[type=submit]:hover {}
-
-font,
 input[type=password],
 input[type=text] {
     border: 0;
@@ -70,4 +67,18 @@ font,
 input[type=pasword],
 input[type=text]:hover {
     border: 0ch;
+}
+
+.btn {
+    padding: .55rem 1.5rem .45rem;
+}
+
+#imgnav {
+    width: 10%;
+    height: 10%;
+}
+
+.icon-placeholder {
+    font: var(--fa-font-solid);
+    content: "\f007";
 }
