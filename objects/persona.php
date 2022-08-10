@@ -4,6 +4,7 @@ class Persona {
     private $nombre;
     private $apellido;
     private $cedula;
+    private $pass;
     private $tipo;
     private $status;
 
@@ -29,6 +30,13 @@ class Persona {
 
     public function getCedula() {
         return $this->cedula;
+    }
+    public function setPass( $pass ) {
+        $pass = $this->pass;
+    }
+
+    public function getPass() {
+        return $this->pass;
     }
 
 }
