@@ -5,32 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3ebfebb6be.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-    <title>Registrarse</title>
+    <link rel="stylesheet" href="./Boostrap/css/bootstrap.min.css">
+    <script src="./Boostrap/js/bootstrap.bundle.min.js"></script>
+    
     <link rel="stylesheet" href="./diseño.css">
 </head>
 <body>
-    
+    <?php
+    include'./objects/persona.php';
+    ?>
 <img src="img/fisiosho.png" alt="" id="logo">  
-    <form action="">
+    <form action="" method="POST">
     <h1>Registrate</h1>
-    <i class="fa-solid fa-user"> <input type="text" placeholder=' Usuario'></i>
-   
+ <div class="form-group">
+    <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1"> <i class="fa-solid fa-user"></i></span>
+  <input type="text" name="nombre" class="form-control" placeholder="Ingrese su Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+</div>
+ <br>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1"> <i class="fa-solid fa-key"></i></span>
+  <input type="text" name="apellido" class="form-control" placeholder="Ingrese su Apellido" aria-label="Apellido" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1"> <i class="fa-solid fa-key"></i></span>
+  <input type="text" name="usuario" class="form-control" placeholder="Ingrese su Usuario" aria-label="Usuario" aria-describedby="basic-addon1">
+</div>
+<br>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1"> <i class="fa-solid fa-key"></i></span>
+  <input type="password" class="form-control" placeholder="Ingrese su contraseña Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
+</div>
     <br>
-    <i class="fa-solid fa-at">
-    <input type="text" placeholder='Mail'></i>
-    <br>
-    <i class="fa-solid fa-key">
-    <input type="passaword" placeholder='Contraseña'></i>
-    <br>
-    <i class="fa-solid fa-calendar-days">
-    <input type="date" placeholder='Fecha Nacimiento'></i>
-    <br>
-   <input type="submit" value="registrarse">
+    <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1"> <i class="fa-solid fa-key"></i></span>
+  <input type="number" class="form-control" placeholder="Ingrese su C.I" aria-label="C.I" aria-describedby="basic-addon1">
+</div>
+
+   <input type="submit" value="registrarse" name="registro">
+   <br>
+   </div>
     <a href="./login.php"> <input type="button" value="Logearse"></a>
     </form>
-    
+    <?php
+ if (isset($_POST['registro'])) {
+ $user=new Cliente;
+ $user->setNombre($_POST['nombre']);
+ $user->setNombre($_POST['nombre']);
+ $user->setNombre($_POST['nombre']);
+ $user->cargarUsuario();
+ echo 'Su nombre es'.$user->getNombre();
+
+ }
+      ?>
 </body>
 </html>

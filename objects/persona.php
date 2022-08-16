@@ -1,5 +1,5 @@
 <?php
-
+include_once'./data/userDB.php';
 class Persona {
     private $nombre;
     private $apellido;
@@ -83,7 +83,9 @@ public function setEsquina( $esquina ) {
 }
 public function getEsquina() {
     return $this->esquina;
-
-
+}
+public function cargarUsuario(){
+    $user=new UserDB();
+    $user->CargarUser($this->getNombre(),$this->getApellido(),$this->getCedula(),$this->getPass(),$this->getCalle(),$this->getEmail(),$this->getNumero(),$this->getEsquina());
 }
 }

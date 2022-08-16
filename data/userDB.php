@@ -1,9 +1,10 @@
 <?php
-include_once "./conect.php";
+include_once "./data/conect.php";
 class UserDB extends Conexion{
-public function CargarUser($nombre,$apellido,$cedula,$email,$telefono,$calle,$numero,$esquina,$pass){
+public function CargarUser($nombre,$apellido,$cedula,$pass){
 $conect=$this->conect();
-$sql="INSERT INTO persona,cliente('persona.nombre,persona.apellido,persona.cedula,persona.pass,cliente.calle,cliente.email,cliente.esquina,cliente.numero')VALUES('$nombre,$apellido,$cedula,$pass,$calle,$email,$email,$esquina,$numero')";
+$sql="INSERT INTO persona(nombre,apellido,cedula,pass)
+VALUES('$nombre','$apellido','$cedula','$pass')";
 
 if ($conect->query($sql)) {
 
