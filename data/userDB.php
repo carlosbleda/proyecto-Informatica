@@ -1,22 +1,19 @@
 <?php
-include_once "./data/conect.php";
-class UserDB extends Conexion{
-public function CargarUser($nombre,$apellido,$cedula,$pass){
-$conect=$this->conect();
-$sql="INSERT INTO persona(nombre,apellido,cedula,pass)
-VALUES('$nombre','$apellido','$cedula','$pass')";
+include_once './data/conect.php';
 
-if ($conect->query($sql)) {
+class UserDB extends Conexion {
+    public function CargarUser( $nombre, $email, $apellido, $pass,$fecha_nac, $cedula ) {
+        $conect = $this->conect();
+        $sql = "INSERT INTO persona(nombre,email,apellido,pass,fecha_nac,cedula)
+VALUES('$nombre','$email','$apellido','$pass','$fecha_nac','$cedula')";
 
+        if ( $conect->query( $sql ) ) {
 
-    echo "Nuevo registro creado con éxito";
-} else {
-    echo "Error: " . $sql . "<br>" . $conect->error;
+            echo 'Nuevo registro creado con éxito';
+        } else {
+            echo 'Error: ' . $sql . '<br>' . $conect->error;
+        }
+        $this->Disconnect();
+    }
+
 }
-$this->Disconnect();
-}
-
-
-}
-
-?>

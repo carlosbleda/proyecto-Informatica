@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="https://kit.fontawesome.com/3ebfebb6be.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Document</title>
@@ -24,7 +24,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+        <li class="nav-item"> 
           <a class="nav-link" href="#">Productos</a>
         </li>
         <li class="nav-item dropdown">
@@ -32,18 +32,20 @@
             Dropdown
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Productos</a></li>
+            <li><a class="dropdown-item" href="#"></a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-       
-      </ul>
-      <form class="d-flex">
+        <form class="d-flex justify-content-center">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
         <button class="btn btn-outline-success" type="submit">Search</button>
+        <a href=""><button><i class="fa-regular fa-cart-shopping"></i></button></a>
       </form>
+      </ul>
+    
     </div>
   </div>
 </nav>
@@ -111,54 +113,54 @@
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
                             <img class="bd-placeholder-img card-img-top" src="img/cat1.jpg">
-                            <h3 class="m-3">Autos (122)</h3>
+                            <h3 class="m-3">Producto1</h3>
                             <div class="card-body">
-                                <p class="card-text">Los mejores precios en autos 0 kilómetro, de alta y media gama.</p>
+                                <p class="card-text"></p>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
                             <img class="bd-placeholder-img card-img-top" src="img/cat2.jpg">
-                            <h3 class="m-3">Juguetes (354)</h3>
+                            <h3 class="m-3">producto 2</h3>
                             <div class="card-body">
-                                <p class="card-text">Encuentra aquí los mejores precios para niños/as de cualquier edad.</p>
+                                <p class="card-text"></p>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
                             <img class="bd-placeholder-img card-img-top" src="img/cat3.jpg">
-                            <h3 class="m-3">Muebles (157)</h3>
+                            <h3 class="m-3">Producto 3</h3>
                             <div class="card-body">
-                                <p class="card-text">Muebles antiguos, nuevos y para ser armados por uno mismo.</p>
+                                <p class="card-text"></p>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
                             <img class="bd-placeholder-img card-img-top" src="img/cat4.jpg">
-                            <h3 class="m-3">Herramientas (452)</h3>
+                            <h3 class="m-3">Producto 3</h3>
                             <div class="card-body">
-                                <p class="card-text">Herramientas para cualquier tipo de trabajo.</p>
+                                <p class="card-text"></p>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
                             <img class="bd-placeholder-img card-img-top" src="img/cat5.jpg">
-                            <h3 class="m-3">Computadoras (724)</h3>
+                            <h3 class="m-3">Producto 3</h3>
                             <div class="card-body">
-                                <p class="card-text">Todo en cuanto a computadoras, para uso de oficina y/o juegos.</p>
+                                <p class="card-text"></p>
                             </div>
                         </a>
                     </div>
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
                             <img class="bd-placeholder-img card-img-top" src="img/cat6.jpg">
-                            <h3 class="m-3">Vestimenta (841)</h3>
+                            <h3 class="m-3">Producto 4</h3>
                             <div class="card-body">
-                                <p class="card-text">Gran variedad de ropa, nueva y de segunda mano.</p>
+                                <p class="card-text"></p>
                             </div>
                         </a>
                     </div>
