@@ -9,7 +9,7 @@ body {
     justify-content: center;
     min-height: 80vh;
     background-repeat: no-repeat;
-    background-image: url(img/fondo.jpg);
+    background: linear-gradient(to right, rgb(198, 255, 255), rgb(0, 144, 144));
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -33,10 +33,10 @@ label {
     font-size: larger;
 }
 
-font,
+form,
 input {
     font-family: 'Courier New', Courier, monospace;
-    border: 0;
+    border: 10;
 }
 
 
@@ -54,11 +54,16 @@ input[type=button] {
     font-size: 16px;
 } */
 
-font,
+
+/* font,
 input[type=password],
-input[type=text] {
-    border: 0;
-    outline: none;
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=date] {
+border: 20px;
+
+    
 }
 
 font,
@@ -71,7 +76,7 @@ font,
 input[type=pasword],
 input[type=text]:hover {
     border: 0ch;
-}
+} */
 
 .btn {
     padding: .55rem 1.5rem .45rem;
@@ -89,4 +94,8 @@ input[type=text]:hover {
 
 .error {
     border-color: red;
+}
+
+#fondologo {
+    background: url(./img/fondoconlogo.jpg);
 }

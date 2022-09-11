@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +11,9 @@
     <script src="https://kit.fontawesome.com/3ebfebb6be.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
     <title>Document</title>
+    <link rel="stylesheet" href="./estilo.css">
 </head>
 <body>
 <style>
@@ -16,40 +22,104 @@
     height: 70px;  
     }
 </style>
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Container wrapper -->
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img id="imgnav" class="img-fluid" src="img/Logo-Pagina-Web-Proyecto.png" alt=""></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
     </button>
+ 
+    <!-- Collapsible wrapper -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img
+          src="./img/Logo-Pagina-Web-Proyecto.png"
+          height="50"
+          alt="MDB Logo"
+          loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"> 
+        <li class="nav-item">
+          <a class="nav-link" href="#"></a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#">Productos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+ 
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <a class="link-secondary me-3" href="#">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+ 
+      <!-- Notifications -->
+      <div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <i class="fas fa-bell"></i>
+  </a>
+ 
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+      <!-- Avatar -->
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-user"></i>
+          <?php
+          include './objects/persona.php';
+          $persona=new Persona();
+          echo $persona->getNombre();
+          if(isset($_SESSION["usuario"])){
+            echo $_SESSION["usuario"];
+          }
+
+
+
+          ?>
+ 
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Productos</a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="login.php">Action</a></li>
+            <li><a class="dropdown-item" href="register.php">Another action</a></li>
+            <li><a class="dropdown-item" href="index.php"><?php session_destroy(); ?>CERRAR SESSION</a></li>
           </ul>
         </li>
-        <form class="d-flex justify-content-center">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-
-        <button class="btn btn-outline-success" type="submit">Search</button>
-        <a href=""><button><i class="fa-regular fa-cart-shopping"></i></button></a>
-      </form>
       </ul>
-    
     </div>
+ 
+    </div>
+    <!-- Right elements -->
   </div>
+  <!-- Container wrapper -->
 </nav>
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+<!-- Navbar -->
+<div id="carouselExampleCaptions w-75" class="carousel slide" data-bs-ride="false">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -101,6 +171,8 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+
 <main role="main">
         <section class="jumbotron text-center">
             <div class="m-5">
@@ -112,8 +184,8 @@
                 <div class="row">
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat1.jpg">
-                            <h3 class="m-3">Producto1</h3>
+                            <img class="bd-placeholder-img card-img-top" src="img/micosep_clotrimazol.jpg">
+                            <h3 class="m-3">Micosep Clotrimazol</h3>
                             <div class="card-body">
                                 <p class="card-text"></p>
                             </div>
@@ -121,8 +193,8 @@
                     </div>
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat2.jpg">
-                            <h3 class="m-3">producto 2</h3>
+                            <img class="bd-placeholder-img card-img-top" src="img/betacort_plus.jpg">
+                            <h3 class="m-3">Betacort Plus</h3>
                             <div class="card-body">
                                 <p class="card-text"></p>
                             </div>
@@ -130,8 +202,8 @@
                     </div>
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat3.jpg">
-                            <h3 class="m-3">Producto 3</h3>
+                            <img class="bd-placeholder-img card-img-top" src="img/innovanz.jpg">
+                            <h3 class="m-3">Innovanz</h3>
                             <div class="card-body">
                                 <p class="card-text"></p>
                             </div>
@@ -139,8 +211,8 @@
                     </div>
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat4.jpg">
-                            <h3 class="m-3">Producto 3</h3>
+                            <img class="bd-placeholder-img card-img-top" src="img/verruxane.jpg">
+                            <h3 class="m-3">Verruxane</h3>
                             <div class="card-body">
                                 <p class="card-text"></p>
                             </div>
@@ -148,8 +220,8 @@
                     </div>
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat5.jpg">
-                            <h3 class="m-3">Producto 3</h3>
+                            <img class="bd-placeholder-img card-img-top" src="img/fortilac.jpg">
+                            <h3 class="m-3">Fortilac</h3>
                             <div class="card-body">
                                 <p class="card-text"></p>
                             </div>
@@ -157,8 +229,8 @@
                     </div>
                     <div class="col-md-4">
                         <a href="categories.html" class="card mb-4 shadow-sm custom-card">
-                            <img class="bd-placeholder-img card-img-top" src="img/cat6.jpg">
-                            <h3 class="m-3">Producto 4</h3>
+                            <img class="bd-placeholder-img card-img-top" src="img/micosep_deo.jpg">
+                            <h3 class="m-3">Microsep Deo</h3>
                             <div class="card-body">
                                 <p class="card-text"></p>
                             </div>
@@ -166,7 +238,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <a type="button" class="btn btn-light btn-lg btn-block" href="categories.html">Ver todas</a>
+                    <a type="button" class="btn btn-light btn-lg btn-block" href="productos.php">MAS</a>
                 </div>
             </div>
         </div>
