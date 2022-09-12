@@ -96,6 +96,11 @@ input[type=text]:hover {
     border-color: red;
 }
 
-#fondologo {
+#registro {
     background: url(./img/fondoconlogo.jpg);
+}
+
+#login {
+    background: url(./img/fondoconlogo.jpg);
+    background-position: center, center;
 }

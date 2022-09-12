@@ -62,22 +62,10 @@ class Persona {
          return $this->tipo;
      }
      public function cargarUsuario(){
-        $user=new UserDB();
+        $user=new usuarioDB();
         $user->CargarUser($this->getNombre(),$this->getEmail(),$this->getApellido(),$this->getPass(),$this->getfecha(),$this->getCedula());
     }
-    public function validacion($cedula,$email){
-        $conect = new Conexion();
-         $consulta= "SELECT * FROM persona WHERE cedula ='$cedula' AND email = '$email'";
-        $resultado=mysqli_query($conect->conect(),$consulta);
-        $fila=mysqli_num_rows($resultado);
-        if($fila>0){
-            header('location:index.php');
-        }else{
-            
-            echo 'Debe ingresar un usuario y contraseña valido';
-        }
-       
-    }
+  
     public function login($usuario,$contraseña){
         $conect = new Conexion();
         $consulta = "SELECT * FROM persona WHERE email ='$usuario' AND pass = '$contraseña'";
@@ -86,10 +74,10 @@ class Persona {
             
             
         if($fila>0){
-            header('location:index.php');
-          
-/*             session_start();
-$_SESSION["usuario"]=; */
+            
+/*           session_start();
+$_SESSION["usuario"]=$nombre; */
+
             }
 
 

@@ -1,7 +1,7 @@
 <?php
 include_once './data/conect.php';
 
-class UserDB extends Conexion {
+class usuarioDB extends Conexion {
     public function CargarUser( $nombre, $email, $apellido, $pass,$fecha_nac, $cedula ) {
         $conect = $this->conect();
         $sql = "INSERT INTO persona(nombre,email,apellido,pass,fecha_nac,cedula)
