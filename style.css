@@ -1,0 +1,111 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background: linear-gradient(to right, rgb(198, 255, 255), rgb(0, 144, 144));
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+#logo {
+    background-color: transparent;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    text-align: center;
+    padding: 20px 25px;
+}
+
+form,
+label {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+
+form,
+input {
+    font-family: 'Courier New', Courier, monospace;
+    border: 10;
+}
+
+
+/* font,
+input[type=submit],
+input[type=button] {
+    background-color: rgb(0, 144, 144);
+    border: none;
+    align-items: center;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+} */
+
+
+/* font,
+input[type=password],
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=date] {
+border: 20px;
+
+    
+}
+
+font,
+input[type=pasword],
+input[type=text]:select {
+    outline: none;
+}
+
+font,
+input[type=pasword],
+input[type=text]:hover {
+    border: 0ch;
+} */
+
+.btn {
+    padding: .55rem 1.5rem .45rem;
+}
+
+#imgnav {
+    width: 10%;
+    height: 10%;
+}
+
+.icon-placeholder {
+    font: var(--fa-font-solid);
+    content: "\f007";
+}
+
+.error {
+    border-color: red;
+}
+
+#registro {
+    background: url(./img/fondoconlogo.jpg);
+}
+
+#login {
+    background: url(./img/fondoconlogo.jpg);
+    background-position: center, center;
+}
+
+#nombreusuario {
+font-family: 'Courier New', monospace;
+
+}
